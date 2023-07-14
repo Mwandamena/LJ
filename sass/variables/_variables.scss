@@ -1,0 +1,25 @@
+// breakpoints
+$breakpoint-tiny-screens: 23.44em; // 375 / 16
+$breakpoint-small-screens: 37.5em; // 600 / 16
+$breakpoint-tablet-screens: 48em;  // 768 / 16
+$breakpoint-desktop-md-screens: 64em; // 1024 / 16
+
+$type-scale: (
+  small: (
+    300: 1rem,
+    400: 1.125rem,
+    500: 1.563rem,
+    600: 1.953rem,
+    700: 2.441rem,
+    800: 3.041rem
+  ),
+
+  large: (
+    300: 1rem,
+    400: 1.432rem,
+    500: 2rem,
+    600: 2.857rem,
+    700: 4rem,
+    800: 5.653rem
+  )
+)
