@@ -141,16 +141,16 @@ nav {
       font-size: calc(1.7rem * var(--font-multiplier));
     }
     p {
-      font-size: 1rem;
+      font-size: calc(0.9rem * var(--font-multiplier));
     }
 
     a {
-      padding: 1rem 1rem;
-      font-size: calc(1.3rem * var(--font-multiplier));
+      padding: 0.6rem 0.9rem;
+      font-size: calc(1.2rem * var(--font-multiplier));
       border: 2px solid black;
       color: black;
       background-color: white;
-      border-radius: 10px;
+      border-radius: 6px;
       transition: all 350ms ease-out;
 
       &:hover,
@@ -158,6 +158,10 @@ nav {
         background-color: black;
         color: white;
         border: 2px solid white;
+      }
+
+      @include respond(smallphone) {
+        padding: 0.3rem 0.9rem;
       }
     }
   }
@@ -331,6 +335,11 @@ nav {
     .input {
       @include flex;
       gap: 1rem;
+
+      @include respond(smallphone) {
+        @include flex(column);
+      }
+
       input {
         padding: 1rem 1.8rem;
         border-radius: 5px;

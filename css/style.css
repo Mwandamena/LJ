@@ -17,6 +17,11 @@
     --font-multiplier: 1;
   }
 }
+@media only screen and (max-width: 23.44em) {
+  :root {
+    --font-multiplier: 0.9;
+  }
+}
 /* fallback fonts just in case google servers fail lol */
 @font-face {
   font-family: Jost;
@@ -226,21 +231,26 @@ nav .navigation ul li a:hover, nav .navigation ul li afocus {
   font-size: calc(1.7rem * var(--font-multiplier));
 }
 .hero .content-wrapper p {
-  font-size: 1rem;
+  font-size: calc(0.9rem * var(--font-multiplier));
 }
 .hero .content-wrapper a {
-  padding: 1rem 1rem;
-  font-size: calc(1.3rem * var(--font-multiplier));
+  padding: 0.6rem 0.9rem;
+  font-size: calc(1.2rem * var(--font-multiplier));
   border: 2px solid black;
   color: black;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 6px;
   transition: all 350ms ease-out;
 }
 .hero .content-wrapper a:hover, .hero .content-wrapper a:focus {
   background-color: black;
   color: white;
   border: 2px solid white;
+}
+@media only screen and (max-width: 23.44em) {
+  .hero .content-wrapper a {
+    padding: 0.3rem 0.9rem;
+  }
 }
 .hero .overlay {
   position: absolute;
@@ -415,6 +425,12 @@ nav .navigation ul li a:hover, nav .navigation ul li afocus {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+}
+@media only screen and (max-width: 23.44em) {
+  .form form .input {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .form form .input input {
   padding: 1rem 1.8rem;

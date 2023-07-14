@@ -11,6 +11,7 @@ const navigation = document.querySelector(".navigation");
 const btn = document.querySelector(".menu");
 const scrollBtn = document.querySelector(".scroll");
 const overylay = document.querySelector(".over");
+const links = document.querySelectorAll("#link");
 
 window.onscroll = () => {
   scrollFunction();
@@ -37,6 +38,17 @@ function navigationOpen() {
     overylay.setAttribute("data-visible", "false");
     btn.innerHTML = "Menu";
   }
+}
+
+overylay.addEventListener("click", navigationClose);
+links.forEach((link) => {
+  link.addEventListener("click", navigationClose);
+});
+
+function navigationClose() {
+  navigation.setAttribute("data-visible", "false");
+  overylay.setAttribute("data-visible", "false");
+  btn.innerHTML = "Menu";
 }
 
 const navigationHeight = nav.offsetHeight;

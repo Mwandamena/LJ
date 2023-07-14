@@ -18,6 +18,13 @@
     --font-multiplier: 1;
   }
 }
+
+@include respond(smallphone) {
+  :root {
+    --font-multiplier: 0.9;
+  }
+}
+
 /* fallback fonts just in case google servers fail lol */
 @font-face {
   font-family: Jost;
